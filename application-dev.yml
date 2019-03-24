@@ -149,12 +149,12 @@ paascloud:
     testOnReturn: false
     druid:
       exampleId1234:
-        host: paascloud-db-mysql
-        port: 3306
-        username: root
-        password: 123456
+        - host: paascloud-db-mysql
+        - port: 3306
+        - username: root
+        - password: 123456
       exampleId2222:
-        host: paascloud-db-mysql
-        port: 3306
-        username: root
-        password: 123456
+        - host: paascloud-db-mysql
+        - port: 3306
+        - username: root
+        - password: 123456
