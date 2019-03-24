@@ -145,16 +145,18 @@ paascloud:
     timeBetweenEvictionRunsMillis: 60000
     minEvictableIdleTimeMillis: 300000
     testWhileIdle: true
-    testOnBorrow: fasle
+    testOnBorrow: false
     testOnReturn: false
-    druid:
-      exampleId1234:
-        - host: paascloud-db-mysql
-        - port: 3306
-        - username: root
-        - password: 123456
-      exampleId2222:
-        - host: paascloud-db-mysql
-        - port: 3306
-        - username: root
-        - password: 123456
+    list:
+      druid[0]:
+        name: exampleId1234
+        host: paascloud-db-mysql
+        port: 3306
+        username: root
+        password: 123456
+      druid[1]:
+        name: exampleId2222
+        host: paascloud-db-mysql
+        port: 3306
+        username: root
+        password: 123456

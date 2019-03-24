@@ -44,11 +44,11 @@ security:
 paascloud:
   enableSqlLogInterceptor: false
   database: 
-    druid:
-      exampleId1234:
-        - enable: true
-      exampleId2222:
-        - enable: true
+    list:
+      druid[0]:
+        enable: true
+      druid[1]:
+        enable: true
   aliyun:
     rocketMq:
       enable: true
