@@ -147,16 +147,17 @@ paascloud:
     testWhileIdle: true
     testOnBorrow: false
     testOnReturn: false
-    list:
-      druid[0]:
-        name: exampleId1234
-        host: paascloud-db-mysql
-        port: 3306
-        username: root
-        password: 123456
-      druid[1]:
-        name: exampleId2222
-        host: paascloud-db-mysql
-        port: 3306
-        username: root
-        password: 123456
+    druid[0]:
+      name: exampleId1234
+      host: paascloud-db-mysql
+      port: 3306
+      username: root
+      password: 123456
+      initstance: uac,omc
+    druid[1]:
+      name: exampleId2222
+      host: paascloud-db-mysql
+      port: 3306
+      username: root
+      password: 123456
+      initstance: uac,omc
