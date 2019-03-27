@@ -137,3 +137,24 @@ paascloud:
       qiniuPath: alipay/QRCode/
   zk:
     zkAddressList: paascloud-provider-zk:2181
+  database:
+    driverClassName: com.mysql.jdbc.Driver
+    initialSize: 50
+    minIdle: 50
+    maxActive: 100
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    testWhileIdle: true
+    testOnBorrow: fasle
+    testOnReturn: false
+    druid:
+      exampleId1234:
+        host: paascloud-db-mysql
+        port: 3306
+        username: root
+        password: 123456
+      exampleId2222:
+        host: paascloud-db-mysql
+        port: 3306
+        username: root
+        password: 123456
