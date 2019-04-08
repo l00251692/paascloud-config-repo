@@ -40,8 +40,8 @@ spring:
         login-password: admin
   mail:
     host: smtp.126.com
-    username: jhcy55@126.com
-    password: !0505xyy
+    username: miniservertest@126.com
+    password: 1q2w3e4r
     port: 465
     protocol: smtp
     test-connection: false
