@@ -145,7 +145,7 @@ paascloud:
     timeBetweenEvictionRunsMillis: 60000
     minEvictableIdleTimeMillis: 300000
     testWhileIdle: true
-    testOnBorrow: fasle
+    testOnBorrow: false
     testOnReturn: false
     druid:
       exampleId1234:
