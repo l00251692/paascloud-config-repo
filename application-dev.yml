@@ -124,11 +124,11 @@ paascloud:
       domain: dysmsapi.aliyuncs.com
   qiniu:
     key:
-      accessKey: 'your qiniu accessKey'
-      secretKey: 'your qiniu secretKey'
+      accessKey: 'YxW2_V1FQj2yOYNlHlzhHiAHI4cwWkPWNIxiT_ae'
+      secretKey: '1d1Uo7S3x7qJXSL8ljbW46b2dKgWL0fPjHxG4PdI'
     oss:
       privateHost: 'your qiniu oss private host'
-      publicHost: 'your qiniu oss public host'
+      publicHost: 'psb7edjec.bkt.clouddn.com'
   alipay:
     callback:
       url: http://dev-api.paascloud.net/omc/pay/alipayCallback
@@ -147,6 +147,10 @@ paascloud:
     testWhileIdle: true
     testOnBorrow: false
     testOnReturn: false
+    defaultName4Uac: paascloud_uac
+    defaultName4Mdc: paascloud_mdc
+    defaultName4Omc: paascloud_omc
+    defaultName4Opc: paascloud_opc
     druid[0]:
         name: exampleId1234
         host: paascloud-db-mysql
@@ -156,6 +160,13 @@ paascloud:
         initstance: uac,omc
     druid[1]:
         name: exampleId2222
+        host: paascloud-db-mysql
+        port: 3306
+        username: root
+        password: 123456
+        initstance: uac,omc
+    druid[2]:
+        name: paascloud_uac
         host: paascloud-db-mysql
         port: 3306
         username: root
