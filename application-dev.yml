@@ -155,7 +155,7 @@ paascloud:
       password: 123456
       initstance: uac,omc
     druid[1]:
-      name: exampleId2222
+      name: wx7b7aabca0fc1737d
       host: paascloud-db-mysql
       port: 3306
       username: root
