@@ -11,7 +11,7 @@ spring:
 
 zuul:
   host:
-    socket-timeout-millis: 60000
+    socket-timeout-millis: 60001
     connect-timeout-millis: 60000
   forceOriginalQueryStringEncoding: true
   routes:
