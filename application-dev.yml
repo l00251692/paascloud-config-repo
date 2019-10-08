@@ -148,16 +148,59 @@ paascloud:
     testOnBorrow: false
     testOnReturn: false
     druid[0]:
-      name: exampleId1234
+      appId: paascloud_uac
+      name: paascloud_uac
       host: paascloud-db-mysql
       port: 3306
       username: root
       password: 123456
       initstance: uac,omc
     druid[1]:
+      appId: paascloud_mdc
+      name: paascloud_mdc
+      host: paascloud-db-mysql
+      port: 3306
+      username: root
+      password: 123456
+      initstance: uac,omc
+    druid[2]:
+      appId: paascloud_omc
+      name: paascloud_omc
+      host: paascloud-db-mysql
+      port: 3306
+      username: root
+      password: 123456
+      initstance: uac,omc
+    druid[3]:
+      appId: paascloud_opc
+      name: paascloud_opc
+      host: paascloud-db-mysql
+      port: 3306
+      username: root
+      password: 123456
+      initstance: uac,omc
+    druid[4]:
+      appId: paascloud_tpc
+      name: paascloud_tpc
+      host: paascloud-db-mysql
+      port: 3306
+      username: root
+      password: 123456
+      initstance: uac,omc
+    druid[5]:
+      appId: exampleId1234
+      name: exampleId1234
+      host: paascloud-db-mysql
+      port: 3306
+      username: root
+      password: 123456
+      initstance: uac,omc
+    druid[6]:
+      appId: wx7b7aabca0fc1737d
       name: wx7b7aabca0fc1737d
       host: paascloud-db-mysql
       port: 3306
       username: root
       password: 123456
       initstance: uac,omc
+    
