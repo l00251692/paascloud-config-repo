@@ -41,7 +41,7 @@ spring:
   mail:
     host: smtp.126.com
     username: miniservertest@126.com
-    password: 1q2w3e4r
+    password: 1q2w3e4r5t
     port: 465
     protocol: smtp
     test-connection: false
