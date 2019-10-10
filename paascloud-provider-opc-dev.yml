@@ -54,6 +54,7 @@ security:
 
 paascloud:
   enableSqlLogInterceptor: false
+  defaultDataSourceName: paascloud_opc
   token:
     interceptor:
       enable: true

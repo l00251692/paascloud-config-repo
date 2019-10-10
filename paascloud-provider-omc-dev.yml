@@ -45,6 +45,7 @@ security:
 
 paascloud:
   enableSqlLogInterceptor: false
+  defaultDataSourceName: paascloud_omc
   aliyun:
     rocketMq:
       enable: false

@@ -154,7 +154,7 @@ paascloud:
       port: 3306
       username: root
       password: 123456
-      initstance: uac,omc
+      initstance: uac
     druid[1]:
       appId: paascloud_mdc
       name: paascloud_mdc
@@ -162,7 +162,7 @@ paascloud:
       port: 3306
       username: root
       password: 123456
-      initstance: uac,omc
+      initstance: mdc
     druid[2]:
       appId: paascloud_omc
       name: paascloud_omc
@@ -170,7 +170,7 @@ paascloud:
       port: 3306
       username: root
       password: 123456
-      initstance: uac,omc
+      initstance: omc
     druid[3]:
       appId: paascloud_opc
       name: paascloud_opc
@@ -178,7 +178,7 @@ paascloud:
       port: 3306
       username: root
       password: 123456
-      initstance: uac,omc
+      initstance: opc
     druid[4]:
       appId: paascloud_tpc
       name: paascloud_tpc
@@ -186,7 +186,7 @@ paascloud:
       port: 3306
       username: root
       password: 123456
-      initstance: uac,omc
+      initstance: tpc
     druid[5]:
       appId: exampleId1234
       name: exampleId1234
@@ -194,7 +194,7 @@ paascloud:
       port: 3306
       username: root
       password: 123456
-      initstance: uac,omc
+      initstance: uac,omc,tpc,opc,mdc
     druid[6]:
       appId: wx7b7aabca0fc1737d
       name: wx7b7aabca0fc1737d
@@ -202,4 +202,4 @@ paascloud:
       port: 3306
       username: root
       password: 123456
-      initstance: uac,omc
+      initstance: uac,omc,tpc,opc,mdc
