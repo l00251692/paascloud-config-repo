@@ -66,7 +66,7 @@ paascloud:
       secretKey: 1d1Uo7S3x7qJXSL8ljbW46b2dKgWL0fPjHxG4PdI
     oss:
       privateHost:
-      publicHost: psb7edjec.bkt.clouddn.com
+      publicHost: pz8njmvtg.bkt.clouddn.com
       fileMaxSize: 104857600
       openImgBucket: open-img-bucket-2
   oauth2:
