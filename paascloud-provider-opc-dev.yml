@@ -68,6 +68,7 @@ paascloud:
       privateHost:
       publicHost: psb7edjec.bkt.clouddn.com
       fileMaxSize: 104857600
+      openImgBucket: open-img-bucket-2
   oauth2:
     jwtSigningKey: paascloud
     client:
