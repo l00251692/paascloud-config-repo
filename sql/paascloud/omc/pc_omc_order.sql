@@ -11,7 +11,7 @@
  Target Server Version : 50725
  File Encoding         : 65001
 
- Date: 29/07/2019 00:06:59
+ Date: 12/10/2019 10:35:40
 */
 
 SET NAMES utf8mb4;
@@ -45,6 +45,7 @@ CREATE TABLE `pc_omc_order`  (
   `order_type` tinyint(4) NULL DEFAULT NULL COMMENT '订单类型  0-正常订单，1-秒杀订单',
   `receive_time` datetime(0) NULL DEFAULT NULL COMMENT '收货时间',
   `adjust_amount` decimal(20, 0) UNSIGNED ZEROFILL NULL DEFAULT NULL COMMENT '调整金额',
+  `app_id` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT 'appId',
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE INDEX `order_no_index`(`order_no`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = '订单表' ROW_FORMAT = Dynamic;
@@ -52,7 +53,7 @@ CREATE TABLE `pc_omc_order`  (
 -- ----------------------------
 -- Records of pc_omc_order
 -- ----------------------------
-INSERT INTO `pc_omc_order` VALUES (1, 1, '1', 1, NULL, 123.75, 1, 0, 10, '2019-07-24 21:51:47', NULL, NULL, NULL, '超级管理员', 1, '2019-07-24 21:55:24', '超级管理员', 1, '2019-07-24 21:55:24', 1, NULL, NULL, NULL);
-INSERT INTO `pc_omc_order` VALUES (2, 2, '2', 1, 2, 55.13, 1, 8, 40, '2019-07-16 21:59:17', '2019-07-24 21:59:24', '2019-07-24 21:59:28', '2019-07-24 22:00:27', '超级管理员', 1, '2019-07-24 21:58:39', '超级管理员', 1, '2019-07-24 21:58:39', 1, NULL, NULL, NULL);
+INSERT INTO `pc_omc_order` VALUES (1, 1, '1', 1, NULL, 123.75, 1, 0, 10, '2019-07-24 21:51:47', NULL, NULL, NULL, '超级管理员', 1, '2019-07-24 21:55:24', '超级管理员', 1, '2019-07-24 21:55:24', 1, NULL, NULL, NULL, NULL);
+INSERT INTO `pc_omc_order` VALUES (2, 2, '2', 1, 2, 55.13, 1, 8, 40, '2019-07-16 21:59:17', '2019-07-24 21:59:24', '2019-07-24 21:59:28', '2019-07-24 22:00:27', '超级管理员', 1, '2019-07-24 21:58:39', '超级管理员', 1, '2019-07-24 21:58:39', 1, NULL, NULL, NULL, NULL);
 
 SET FOREIGN_KEY_CHECKS = 1;

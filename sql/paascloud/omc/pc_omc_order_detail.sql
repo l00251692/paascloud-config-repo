@@ -11,7 +11,7 @@
  Target Server Version : 50725
  File Encoding         : 65001
 
- Date: 29/07/2019 00:07:06
+ Date: 12/10/2019 10:35:53
 */
 
 SET NAMES utf8mb4;
@@ -40,6 +40,7 @@ CREATE TABLE `pc_omc_order_detail`  (
   `last_operator_id` bigint(20) NULL DEFAULT NULL COMMENT '最后操作人ID',
   `update_time` datetime(0) NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
   `product_sn` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '商品货号',
+  `app_id` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT 'appId',
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `order_no_index`(`order_no`) USING BTREE,
   INDEX `order_no_user_id_index`(`order_no`) USING BTREE
@@ -48,7 +49,7 @@ CREATE TABLE `pc_omc_order_detail`  (
 -- ----------------------------
 -- Records of pc_omc_order_detail
 -- ----------------------------
-INSERT INTO `pc_omc_order_detail` VALUES (11, 1, '11', 1, '1', 673281828794164224, '自制饮料', '', NULL, 2, 123.74, '超级管理员', 1, '2019-07-24 22:04:13', '超级管理员', 1, '2019-07-24 22:04:13', NULL);
-INSERT INTO `pc_omc_order_detail` VALUES (22, 1, '22', 1, '2', 673281828794164224, '自制饮料', '', NULL, 1, 55.13, '超级管理员', 1, '2019-07-24 22:04:27', '超级管理员', 1, '2019-07-24 22:04:27', NULL);
+INSERT INTO `pc_omc_order_detail` VALUES (11, 1, '11', 1, '1', 673281828794164224, '自制饮料', '', NULL, 2, 123.74, '超级管理员', 1, '2019-07-24 22:04:13', '超级管理员', 1, '2019-07-24 22:04:13', NULL, NULL);
+INSERT INTO `pc_omc_order_detail` VALUES (22, 1, '22', 1, '2', 673281828794164224, '自制饮料', '', NULL, 1, 55.13, '超级管理员', 1, '2019-07-24 22:04:27', '超级管理员', 1, '2019-07-24 22:04:27', NULL, NULL);
 
 SET FOREIGN_KEY_CHECKS = 1;

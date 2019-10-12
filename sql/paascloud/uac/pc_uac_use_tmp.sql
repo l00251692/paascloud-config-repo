@@ -11,7 +11,7 @@
  Target Server Version : 50725
  File Encoding         : 65001
 
- Date: 29/07/2019 00:07:39
+ Date: 12/10/2019 10:27:44
 */
 
 SET NAMES utf8mb4;
@@ -49,12 +49,11 @@ CREATE TABLE `pc_uac_user`  (
   `update_time` datetime(0) NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
   `app_id` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT 'appId',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '操作员表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 734627865210960898 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '操作员表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of pc_uac_user
 -- ----------------------------
-INSERT INTO `pc_uac_user` VALUES (1, 1, 'admin', '$2a$10$LvlRXYpsKRdqahrB/AxQmuQBKyfzD9svcYWd7WLi5aPTNYx3BzvKG', '380048354543013888', 'admin', '超级管理员', '15522222222', '15522222222@163.com', 'ENABLE', '', '', '127.0.0.1', '北京市', '', '2019-07-28 08:25:40', 1, 1, '2017-06-13 18:52:54', 'admin', 1, '2017-12-05 22:45:26', 'admin1', 1, '2017-12-05 22:45:26', '');
 INSERT INTO `pc_uac_user` VALUES (734627865210960897, 0, 'jhcy55', '$2a$10$LXrvRzEhbKFZMx4X1KcdWOqI6481GWP2uDCcWOYCyVB93iBy3r24y', '734631542692822016', '', 'jhcy55', '18061291055', 'jhcy55@126.com', 'ENABLE', 'REGISTER', '', '127.0.0.1', '北京市', '', '2019-10-12 10:04:43', 1, 0, NULL, 'jhcy55', NULL, '2019-10-11 14:14:26', 'jhcy55', NULL, '2019-10-11 14:21:44', 'exampleId5555');
 
 SET FOREIGN_KEY_CHECKS = 1;
