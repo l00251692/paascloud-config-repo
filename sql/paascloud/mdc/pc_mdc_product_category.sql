@@ -16,6 +16,7 @@
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
+SELECT @APP_ID:=param_value from sys_config where param_name = 'APP_ID';
 
 -- ----------------------------
 -- Table structure for pc_mdc_product_category
@@ -49,37 +50,35 @@ CREATE TABLE `pc_mdc_product_category`  (
 -- ----------------------------
 -- Records of pc_mdc_product_category
 -- ----------------------------
-INSERT INTO `pc_mdc_product_category` VALUES (100001, 0, '100001', NULL, 0, '家用电器', 1, 1, 'admin', '1', '2017-07-12 14:01:10', 'admin', '1', '2017-07-12 14:01:10', NULL, 0, 0, NULL, NULL, NULL, NULL);
-INSERT INTO `pc_mdc_product_category` VALUES (100002, 0, '100002', NULL, 0, '数码3C', 1, 1, 'admin', '1', '2017-07-12 14:01:10', 'admin', '1', '2017-07-12 14:01:10', NULL, 0, 0, NULL, NULL, NULL, NULL);
-INSERT INTO `pc_mdc_product_category` VALUES (100003, 0, '100003', NULL, 0, '服装箱包', 1, 1, 'admin', '1', '2017-07-12 14:01:10', 'admin', '1', '2017-07-12 14:01:10', NULL, 0, 0, NULL, NULL, NULL, NULL);
-INSERT INTO `pc_mdc_product_category` VALUES (100004, 0, '100004', NULL, 0, '食品生鲜', 1, 1, 'admin', '1', '2017-07-12 14:01:10', 'admin', '1', '2017-07-12 14:01:10', NULL, 0, 0, NULL, NULL, NULL, NULL);
-INSERT INTO `pc_mdc_product_category` VALUES (100005, 3, '100005', 648728075877491712, 0, '酒水饮料', 1, 2, 'admin', '1', '2017-07-12 14:01:10', '超级管理员', '1', '2019-06-15 01:47:12', NULL, 1, 0, '酒水', '酒水', '瓶', NULL);
-INSERT INTO `pc_mdc_product_category` VALUES (100006, 0, '100006', NULL, 100001, '冰箱', 1, 2, 'admin', '1', '2017-07-12 14:01:10', '超级管理员', '1', '2018-03-05 23:14:54', NULL, 0, 0, NULL, NULL, NULL, NULL);
-INSERT INTO `pc_mdc_product_category` VALUES (100007, 0, '100007', NULL, 100001, '电视', 1, 1, 'admin', '1', '2017-07-12 14:01:10', 'admin', '1', '2017-07-12 14:01:10', NULL, 0, 0, NULL, NULL, NULL, NULL);
-INSERT INTO `pc_mdc_product_category` VALUES (100008, 0, '100008', NULL, 100001, '洗衣机', 1, 1, 'admin', '1', '2017-07-12 14:01:10', 'admin', '1', '2017-07-12 14:01:10', NULL, 0, 0, NULL, NULL, NULL, NULL);
-INSERT INTO `pc_mdc_product_category` VALUES (100009, 0, '100009', NULL, 100001, '空调', 1, 1, 'admin', '1', '2017-07-12 14:01:10', 'admin', '1', '2017-07-12 14:01:10', NULL, 0, 0, NULL, NULL, NULL, NULL);
-INSERT INTO `pc_mdc_product_category` VALUES (100010, 0, '100010', NULL, 100001, '电热水器', 1, 1, 'admin', '1', '2017-07-12 14:01:10', 'admin', '1', '2017-07-12 14:01:10', NULL, 0, 0, NULL, NULL, NULL, NULL);
-INSERT INTO `pc_mdc_product_category` VALUES (100011, 0, '100011', NULL, 100002, '电脑', 1, 1, 'admin', '1', '2017-07-12 14:01:10', 'admin', '1', '2017-07-12 14:01:10', NULL, 0, 0, NULL, NULL, NULL, NULL);
-INSERT INTO `pc_mdc_product_category` VALUES (100012, 0, '100012', NULL, 100002, '手机', 1, 1, 'admin', '1', '2017-07-12 14:01:10', 'admin', '1', '2017-07-12 14:01:10', NULL, 0, 0, NULL, NULL, NULL, NULL);
-INSERT INTO `pc_mdc_product_category` VALUES (100013, 0, '100013', NULL, 100002, '平板电脑', 1, 1, 'admin', '1', '2017-07-12 14:01:10', 'admin', '1', '2017-07-12 14:01:10', NULL, 0, 0, NULL, NULL, NULL, NULL);
-INSERT INTO `pc_mdc_product_category` VALUES (100014, 0, '100014', NULL, 100002, '数码相机', 1, 1, 'admin', '1', '2017-07-12 14:01:10', 'admin', '1', '2017-07-12 14:01:10', NULL, 0, 0, NULL, NULL, NULL, NULL);
-INSERT INTO `pc_mdc_product_category` VALUES (100015, 0, '100015', NULL, 100002, '3C配件', 1, 1, 'admin', '1', '2017-07-12 14:01:10', 'admin', '1', '2017-07-12 14:01:10', NULL, 0, 0, NULL, NULL, NULL, NULL);
-INSERT INTO `pc_mdc_product_category` VALUES (100016, 0, '100016', NULL, 100003, '女装', 1, 1, 'admin', '1', '2017-07-12 14:01:10', 'admin', '1', '2017-07-12 14:01:10', NULL, 0, 0, NULL, NULL, NULL, NULL);
-INSERT INTO `pc_mdc_product_category` VALUES (100017, 0, '100017', NULL, 100003, '帽子', 1, 1, 'admin', '1', '2017-07-12 14:01:10', 'admin', '1', '2017-07-12 14:01:10', NULL, 0, 0, NULL, NULL, NULL, NULL);
-INSERT INTO `pc_mdc_product_category` VALUES (100018, 0, '100018', NULL, 100003, '旅行箱', 1, 1, 'admin', '1', '2017-07-12 14:01:10', 'admin', '1', '2017-07-12 14:01:10', NULL, 0, 0, NULL, NULL, NULL, NULL);
-INSERT INTO `pc_mdc_product_category` VALUES (100019, 0, '100019', NULL, 100003, '手提包', 1, 1, 'admin', '1', '2017-07-12 14:01:10', 'admin', '1', '2017-07-12 14:01:10', NULL, 0, 0, NULL, NULL, NULL, NULL);
-INSERT INTO `pc_mdc_product_category` VALUES (100020, 0, '100020', NULL, 100003, '保暖内衣', 1, 1, 'admin', '1', '2017-07-12 14:01:10', 'admin', '1', '2017-07-12 14:01:10', NULL, 0, 0, NULL, NULL, NULL, NULL);
-INSERT INTO `pc_mdc_product_category` VALUES (100021, 0, '100021', NULL, 100004, '零食', 1, 1, 'admin', '1', '2017-07-12 14:01:10', 'admin', '1', '2017-07-12 14:01:10', NULL, 0, 0, NULL, NULL, NULL, NULL);
-INSERT INTO `pc_mdc_product_category` VALUES (100022, 0, '100022', NULL, 100004, '生鲜', 1, 1, 'admin', '1', '2017-07-12 14:01:10', 'admin', '1', '2017-07-12 14:01:10', NULL, 0, 0, NULL, NULL, NULL, NULL);
-INSERT INTO `pc_mdc_product_category` VALUES (100023, 0, '100023', NULL, 100004, '半成品菜', 1, 1, 'admin', '1', '2017-07-12 14:01:10', 'admin', '1', '2017-07-12 14:01:10', NULL, 0, 0, NULL, NULL, NULL, NULL);
-INSERT INTO `pc_mdc_product_category` VALUES (100024, 0, '100024', NULL, 100004, '速冻食品', 1, 1, 'admin', '1', '2017-07-12 14:01:10', 'admin', '1', '2017-07-12 14:01:10', NULL, 0, 0, NULL, NULL, NULL, NULL);
-INSERT INTO `pc_mdc_product_category` VALUES (100025, 0, '100025', NULL, 100004, '进口食品', 1, 1, 'admin', '1', '2017-07-12 14:01:10', 'admin', '1', '2017-07-12 14:01:10', NULL, 0, 0, NULL, NULL, NULL, NULL);
-INSERT INTO `pc_mdc_product_category` VALUES (100026, 2, '100026', NULL, 100005, '白酒', 1, 1, 'admin', '1', '2017-07-12 14:01:10', '超级管理员', '1', '2018-03-05 23:22:59', NULL, 0, 0, NULL, NULL, NULL, NULL);
-INSERT INTO `pc_mdc_product_category` VALUES (100027, 2, '100027', NULL, 100005, '红酒', 1, 1, 'admin', '1', '2017-07-12 14:01:10', '超级管理员', '1', '2018-03-05 23:22:59', NULL, 0, 0, NULL, NULL, NULL, NULL);
-INSERT INTO `pc_mdc_product_category` VALUES (100028, 5, '100028', NULL, 100005, '饮料', 1, 1, 'admin', '1', '2017-07-12 14:01:10', '超级管理员', '1', '2019-05-28 17:37:29', NULL, 1, 0, NULL, NULL, NULL, NULL);
-INSERT INTO `pc_mdc_product_category` VALUES (100029, 2, '100029', NULL, 100005, '调制鸡尾酒', 1, 1, 'admin', '1', '2017-07-12 14:01:10', '超级管理员', '1', '2018-03-05 23:22:59', NULL, 0, 0, NULL, NULL, NULL, NULL);
-INSERT INTO `pc_mdc_product_category` VALUES (100030, 2, '100030', NULL, 100005, '进口洋酒', 1, 1, 'admin', '1', '2017-07-12 14:01:10', '超级管理员', '1', '2018-03-05 23:22:59', NULL, 0, 0, NULL, NULL, NULL, NULL);
-INSERT INTO `pc_mdc_product_category` VALUES (734669443271018496, 0, '', NULL, 0, '服装-jhcy55', 1, 0, 'jhcy55', '734627865210960897', '2019-10-11 15:37:02', 'jhcy55', '734627865210960897', '2019-10-11 15:37:02', NULL, 1, 1, '', '', '111', 'exampleId5555');
-INSERT INTO `pc_mdc_product_category` VALUES (734670377367685120, 0, '', 735234874968949760, 734669443271018496, '上衣-jhcy55', 1, 0, 'jhcy55', '734627865210960897', '2019-10-11 15:38:54', 'jhcy55', '734627865210960897', '2019-10-12 10:20:33', NULL, 1, 1, '', '', '111', 'exampleId5555');
+INSERT INTO `pc_mdc_product_category` VALUES (100001, 0, '100001', NULL, 0, '家用电器', 1, 1, 'admin', '1', '2017-07-12 14:01:10', 'admin', '1', '2017-07-12 14:01:10', NULL, 0, 0, NULL, NULL, NULL, @APP_ID);
+INSERT INTO `pc_mdc_product_category` VALUES (100002, 0, '100002', NULL, 0, '数码3C', 1, 1, 'admin', '1', '2017-07-12 14:01:10', 'admin', '1', '2017-07-12 14:01:10', NULL, 0, 0, NULL, NULL, NULL, @APP_ID);
+INSERT INTO `pc_mdc_product_category` VALUES (100003, 0, '100003', NULL, 0, '服装箱包', 1, 1, 'admin', '1', '2017-07-12 14:01:10', 'admin', '1', '2017-07-12 14:01:10', NULL, 0, 0, NULL, NULL, NULL, @APP_ID);
+INSERT INTO `pc_mdc_product_category` VALUES (100004, 0, '100004', NULL, 0, '食品生鲜', 1, 1, 'admin', '1', '2017-07-12 14:01:10', 'admin', '1', '2017-07-12 14:01:10', NULL, 0, 0, NULL, NULL, NULL, @APP_ID);
+INSERT INTO `pc_mdc_product_category` VALUES (100005, 3, '100005', 648728075877491712, 0, '酒水饮料', 1, 2, 'admin', '1', '2017-07-12 14:01:10', '超级管理员', '1', '2019-06-15 01:47:12', NULL, 1, 0, '酒水', '酒水', '瓶', @APP_ID);
+INSERT INTO `pc_mdc_product_category` VALUES (100006, 0, '100006', NULL, 100001, '冰箱', 1, 2, 'admin', '1', '2017-07-12 14:01:10', '超级管理员', '1', '2018-03-05 23:14:54', NULL, 0, 0, NULL, NULL, NULL, @APP_ID);
+INSERT INTO `pc_mdc_product_category` VALUES (100007, 0, '100007', NULL, 100001, '电视', 1, 1, 'admin', '1', '2017-07-12 14:01:10', 'admin', '1', '2017-07-12 14:01:10', NULL, 0, 0, NULL, NULL, NULL, @APP_ID);
+INSERT INTO `pc_mdc_product_category` VALUES (100008, 0, '100008', NULL, 100001, '洗衣机', 1, 1, 'admin', '1', '2017-07-12 14:01:10', 'admin', '1', '2017-07-12 14:01:10', NULL, 0, 0, NULL, NULL, NULL, @APP_ID);
+INSERT INTO `pc_mdc_product_category` VALUES (100009, 0, '100009', NULL, 100001, '空调', 1, 1, 'admin', '1', '2017-07-12 14:01:10', 'admin', '1', '2017-07-12 14:01:10', NULL, 0, 0, NULL, NULL, NULL, @APP_ID);
+INSERT INTO `pc_mdc_product_category` VALUES (100010, 0, '100010', NULL, 100001, '电热水器', 1, 1, 'admin', '1', '2017-07-12 14:01:10', 'admin', '1', '2017-07-12 14:01:10', NULL, 0, 0, NULL, NULL, NULL, @APP_ID);
+INSERT INTO `pc_mdc_product_category` VALUES (100011, 0, '100011', NULL, 100002, '电脑', 1, 1, 'admin', '1', '2017-07-12 14:01:10', 'admin', '1', '2017-07-12 14:01:10', NULL, 0, 0, NULL, NULL, NULL, @APP_ID);
+INSERT INTO `pc_mdc_product_category` VALUES (100012, 0, '100012', NULL, 100002, '手机', 1, 1, 'admin', '1', '2017-07-12 14:01:10', 'admin', '1', '2017-07-12 14:01:10', NULL, 0, 0, NULL, NULL, NULL, @APP_ID);
+INSERT INTO `pc_mdc_product_category` VALUES (100013, 0, '100013', NULL, 100002, '平板电脑', 1, 1, 'admin', '1', '2017-07-12 14:01:10', 'admin', '1', '2017-07-12 14:01:10', NULL, 0, 0, NULL, NULL, NULL, @APP_ID);
+INSERT INTO `pc_mdc_product_category` VALUES (100014, 0, '100014', NULL, 100002, '数码相机', 1, 1, 'admin', '1', '2017-07-12 14:01:10', 'admin', '1', '2017-07-12 14:01:10', NULL, 0, 0, NULL, NULL, NULL, @APP_ID);
+INSERT INTO `pc_mdc_product_category` VALUES (100015, 0, '100015', NULL, 100002, '3C配件', 1, 1, 'admin', '1', '2017-07-12 14:01:10', 'admin', '1', '2017-07-12 14:01:10', NULL, 0, 0, NULL, NULL, NULL, @APP_ID);
+INSERT INTO `pc_mdc_product_category` VALUES (100016, 0, '100016', NULL, 100003, '女装', 1, 1, 'admin', '1', '2017-07-12 14:01:10', 'admin', '1', '2017-07-12 14:01:10', NULL, 0, 0, NULL, NULL, NULL, @APP_ID);
+INSERT INTO `pc_mdc_product_category` VALUES (100017, 0, '100017', NULL, 100003, '帽子', 1, 1, 'admin', '1', '2017-07-12 14:01:10', 'admin', '1', '2017-07-12 14:01:10', NULL, 0, 0, NULL, NULL, NULL, @APP_ID);
+INSERT INTO `pc_mdc_product_category` VALUES (100018, 0, '100018', NULL, 100003, '旅行箱', 1, 1, 'admin', '1', '2017-07-12 14:01:10', 'admin', '1', '2017-07-12 14:01:10', NULL, 0, 0, NULL, NULL, NULL, @APP_ID);
+INSERT INTO `pc_mdc_product_category` VALUES (100019, 0, '100019', NULL, 100003, '手提包', 1, 1, 'admin', '1', '2017-07-12 14:01:10', 'admin', '1', '2017-07-12 14:01:10', NULL, 0, 0, NULL, NULL, NULL, @APP_ID);
+INSERT INTO `pc_mdc_product_category` VALUES (100020, 0, '100020', NULL, 100003, '保暖内衣', 1, 1, 'admin', '1', '2017-07-12 14:01:10', 'admin', '1', '2017-07-12 14:01:10', NULL, 0, 0, NULL, NULL, NULL, @APP_ID);
+INSERT INTO `pc_mdc_product_category` VALUES (100021, 0, '100021', NULL, 100004, '零食', 1, 1, 'admin', '1', '2017-07-12 14:01:10', 'admin', '1', '2017-07-12 14:01:10', NULL, 0, 0, NULL, NULL, NULL, @APP_ID);
+INSERT INTO `pc_mdc_product_category` VALUES (100022, 0, '100022', NULL, 100004, '生鲜', 1, 1, 'admin', '1', '2017-07-12 14:01:10', 'admin', '1', '2017-07-12 14:01:10', NULL, 0, 0, NULL, NULL, NULL, @APP_ID);
+INSERT INTO `pc_mdc_product_category` VALUES (100023, 0, '100023', NULL, 100004, '半成品菜', 1, 1, 'admin', '1', '2017-07-12 14:01:10', 'admin', '1', '2017-07-12 14:01:10', NULL, 0, 0, NULL, NULL, NULL, @APP_ID);
+INSERT INTO `pc_mdc_product_category` VALUES (100024, 0, '100024', NULL, 100004, '速冻食品', 1, 1, 'admin', '1', '2017-07-12 14:01:10', 'admin', '1', '2017-07-12 14:01:10', NULL, 0, 0, NULL, NULL, NULL, @APP_ID);
+INSERT INTO `pc_mdc_product_category` VALUES (100025, 0, '100025', NULL, 100004, '进口食品', 1, 1, 'admin', '1', '2017-07-12 14:01:10', 'admin', '1', '2017-07-12 14:01:10', NULL, 0, 0, NULL, NULL, NULL, @APP_ID);
+INSERT INTO `pc_mdc_product_category` VALUES (100026, 2, '100026', NULL, 100005, '白酒', 1, 1, 'admin', '1', '2017-07-12 14:01:10', '超级管理员', '1', '2018-03-05 23:22:59', NULL, 0, 0, NULL, NULL, NULL, @APP_ID);
+INSERT INTO `pc_mdc_product_category` VALUES (100027, 2, '100027', NULL, 100005, '红酒', 1, 1, 'admin', '1', '2017-07-12 14:01:10', '超级管理员', '1', '2018-03-05 23:22:59', NULL, 0, 0, NULL, NULL, NULL, @APP_ID);
+INSERT INTO `pc_mdc_product_category` VALUES (100028, 5, '100028', NULL, 100005, '饮料', 1, 1, 'admin', '1', '2017-07-12 14:01:10', '超级管理员', '1', '2019-05-28 17:37:29', NULL, 1, 0, NULL, NULL, NULL, @APP_ID);
+INSERT INTO `pc_mdc_product_category` VALUES (100029, 2, '100029', NULL, 100005, '调制鸡尾酒', 1, 1, 'admin', '1', '2017-07-12 14:01:10', '超级管理员', '1', '2018-03-05 23:22:59', NULL, 0, 0, NULL, NULL, NULL, @APP_ID);
+INSERT INTO `pc_mdc_product_category` VALUES (100030, 2, '100030', NULL, 100005, '进口洋酒', 1, 1, 'admin', '1', '2017-07-12 14:01:10', '超级管理员', '1', '2018-03-05 23:22:59', NULL, 0, 0, NULL, NULL, NULL, @APP_ID);
 
 SET FOREIGN_KEY_CHECKS = 1;

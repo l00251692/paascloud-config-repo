@@ -16,6 +16,7 @@
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
+SELECT @APP_ID:=param_value from sys_config where param_name = 'APP_ID';
 
 -- ----------------------------
 -- Table structure for pc_mdc_dict
@@ -49,10 +50,10 @@ CREATE TABLE `pc_mdc_dict`  (
 -- ----------------------------
 -- Records of pc_mdc_dict
 -- ----------------------------
-INSERT INTO `pc_mdc_dict` VALUES (1, 0, 0, 'uac', '', '用户中心', 'uac', '用户中心', 0, 0, 10, '', '超级管理员', '1', '2018-01-21 18:24:36', '超级管理员', '1', '2018-01-21 18:24:36', NULL);
-INSERT INTO `pc_mdc_dict` VALUES (2, 0, 0, 'mdc', '', '数据中心', 'mdc', '数据中心', 0, 0, 10, '', '超级管理员', '1', '2018-01-21 18:24:36', '超级管理员', '1', '2018-01-21 18:24:36', NULL);
-INSERT INTO `pc_mdc_dict` VALUES (11, 0, 0, 'USER_STATUS', '1', '用户状态', 'user:status', '用户状态', 1, 0, 10, '1', '', '', '2018-01-21 18:31:54', '超级管理员', '1', '2018-01-21 23:52:33', NULL);
-INSERT INTO `pc_mdc_dict` VALUES (111, 5, 0, '10', '', '可用', 'DISABLED', '可用', 11, 0, 20, '', '', '', '2018-01-21 18:32:20', '超级管理员', '1', '2018-02-26 21:45:47', NULL);
-INSERT INTO `pc_mdc_dict` VALUES (112, 5, 0, '20', '', '禁用', 'ENABLE', '禁用', 11, 0, 20, '', '', '', '2018-01-21 18:32:30', '超级管理员', '1', '2018-02-26 21:45:51', NULL);
+INSERT INTO `pc_mdc_dict` VALUES (1, 0, 0, 'uac', '', '用户中心', 'uac', '用户中心', 0, 0, 10, '', '超级管理员', '1', '2018-01-21 18:24:36', '超级管理员', '1', '2018-01-21 18:24:36', @APP_ID);
+INSERT INTO `pc_mdc_dict` VALUES (2, 0, 0, 'mdc', '', '数据中心', 'mdc', '数据中心', 0, 0, 10, '', '超级管理员', '1', '2018-01-21 18:24:36', '超级管理员', '1', '2018-01-21 18:24:36', @APP_ID);
+INSERT INTO `pc_mdc_dict` VALUES (11, 0, 0, 'USER_STATUS', '1', '用户状态', 'user:status', '用户状态', 1, 0, 10, '1', '', '', '2018-01-21 18:31:54', '超级管理员', '1', '2018-01-21 23:52:33', @APP_ID);
+INSERT INTO `pc_mdc_dict` VALUES (111, 5, 0, '10', '', '可用', 'DISABLED', '可用', 11, 0, 20, '', '', '', '2018-01-21 18:32:20', '超级管理员', '1', '2018-02-26 21:45:47', @APP_ID);
+INSERT INTO `pc_mdc_dict` VALUES (112, 5, 0, '20', '', '禁用', 'ENABLE', '禁用', 11, 0, 20, '', '', '', '2018-01-21 18:32:30', '超级管理员', '1', '2018-02-26 21:45:51', @APP_ID);
 
 SET FOREIGN_KEY_CHECKS = 1;

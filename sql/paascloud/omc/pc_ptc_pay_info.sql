@@ -16,6 +16,7 @@
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
+SELECT @APP_ID:=param_value from sys_config where param_name = 'APP_ID';
 
 -- ----------------------------
 -- Table structure for pc_ptc_pay_info
@@ -42,6 +43,6 @@ CREATE TABLE `pc_ptc_pay_info`  (
 -- ----------------------------
 -- Records of pc_ptc_pay_info
 -- ----------------------------
-INSERT INTO `pc_ptc_pay_info` VALUES (2, 0, 1, '2', 1, '1234567', '1', 'admin', 1, '2019-07-24 22:12:24', 'admin', 1, '2019-07-24 22:12:24', NULL);
+INSERT INTO `pc_ptc_pay_info` VALUES (2, 0, 1, '2', 1, '1234567', '1', 'admin', 1, '2019-07-24 22:12:24', 'admin', 1, '2019-07-24 22:12:24', @APP_ID);
 
 SET FOREIGN_KEY_CHECKS = 1;

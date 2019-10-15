@@ -16,6 +16,7 @@
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
+SELECT @APP_ID:=param_value from sys_config where param_name = 'APP_ID';
 
 -- ----------------------------
 -- Table structure for pc_opc_sms_setting

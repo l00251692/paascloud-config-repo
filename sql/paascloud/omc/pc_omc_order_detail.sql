@@ -16,6 +16,7 @@
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
+SELECT @APP_ID:=param_value from sys_config where param_name = 'APP_ID';
 
 -- ----------------------------
 -- Table structure for pc_omc_order_detail
@@ -49,7 +50,7 @@ CREATE TABLE `pc_omc_order_detail`  (
 -- ----------------------------
 -- Records of pc_omc_order_detail
 -- ----------------------------
-INSERT INTO `pc_omc_order_detail` VALUES (11, 1, '11', 1, '1', 673281828794164224, '自制饮料', '', NULL, 2, 123.74, '超级管理员', 1, '2019-07-24 22:04:13', '超级管理员', 1, '2019-07-24 22:04:13', NULL, NULL);
-INSERT INTO `pc_omc_order_detail` VALUES (22, 1, '22', 1, '2', 673281828794164224, '自制饮料', '', NULL, 1, 55.13, '超级管理员', 1, '2019-07-24 22:04:27', '超级管理员', 1, '2019-07-24 22:04:27', NULL, NULL);
+INSERT INTO `pc_omc_order_detail` VALUES (11, 1, '11', 1, '1', 673281828794164224, '自制饮料', '', NULL, 2, 123.74, '超级管理员', 1, '2019-07-24 22:04:13', '超级管理员', 1, '2019-07-24 22:04:13', NULL, @APP_ID);
+INSERT INTO `pc_omc_order_detail` VALUES (22, 1, '22', 1, '2', 673281828794164224, '自制饮料', '', NULL, 1, 55.13, '超级管理员', 1, '2019-07-24 22:04:27', '超级管理员', 1, '2019-07-24 22:04:27', NULL, @APP_ID);
 
 SET FOREIGN_KEY_CHECKS = 1;

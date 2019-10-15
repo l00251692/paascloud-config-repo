@@ -16,6 +16,7 @@
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
+SELECT @APP_ID:=param_value from sys_config where param_name = 'APP_ID';
 
 -- ----------------------------
 -- Table structure for pc_uac_application
@@ -41,6 +42,6 @@ CREATE TABLE `pc_uac_application`  (
 -- ----------------------------
 -- Records of pc_uac_application
 -- ----------------------------
-INSERT INTO `pc_uac_application` VALUES (1, 1, 'admin', 'admin', 'ENABLE', NULL, 'admin', 1, '2017-12-05 22:45:26', 'admin', 1, '2017-12-05 22:45:26', NULL);
+INSERT INTO `pc_uac_application` VALUES (1, 1, 'admin', 'admin', 'ENABLE', NULL, 'admin', 1, '2017-12-05 22:45:26', 'admin', 1, '2017-12-05 22:45:26', @APP_ID);
 
 SET FOREIGN_KEY_CHECKS = 1;

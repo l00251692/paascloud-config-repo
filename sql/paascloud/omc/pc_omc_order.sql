@@ -16,6 +16,7 @@
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
+SELECT @APP_ID:=param_value from sys_config where param_name = 'APP_ID';
 
 -- ----------------------------
 -- Table structure for pc_omc_order
@@ -53,7 +54,7 @@ CREATE TABLE `pc_omc_order`  (
 -- ----------------------------
 -- Records of pc_omc_order
 -- ----------------------------
-INSERT INTO `pc_omc_order` VALUES (1, 1, '1', 1, NULL, 123.75, 1, 0, 10, '2019-07-24 21:51:47', NULL, NULL, NULL, '超级管理员', 1, '2019-07-24 21:55:24', '超级管理员', 1, '2019-07-24 21:55:24', 1, NULL, NULL, NULL, NULL);
-INSERT INTO `pc_omc_order` VALUES (2, 2, '2', 1, 2, 55.13, 1, 8, 40, '2019-07-16 21:59:17', '2019-07-24 21:59:24', '2019-07-24 21:59:28', '2019-07-24 22:00:27', '超级管理员', 1, '2019-07-24 21:58:39', '超级管理员', 1, '2019-07-24 21:58:39', 1, NULL, NULL, NULL, NULL);
+INSERT INTO `pc_omc_order` VALUES (1, 1, '1', 1, NULL, 123.75, 1, 0, 10, '2019-07-24 21:51:47', NULL, NULL, NULL, '超级管理员', 1, '2019-07-24 21:55:24', '超级管理员', 1, '2019-07-24 21:55:24', 1, NULL, NULL, NULL, @APP_ID);
+INSERT INTO `pc_omc_order` VALUES (2, 2, '2', 1, 2, 55.13, 1, 8, 40, '2019-07-16 21:59:17', '2019-07-24 21:59:24', '2019-07-24 21:59:28', '2019-07-24 22:00:27', '超级管理员', 1, '2019-07-24 21:58:39', '超级管理员', 1, '2019-07-24 21:58:39', 1, NULL, NULL, NULL, @APP_ID);
 
 SET FOREIGN_KEY_CHECKS = 1;
